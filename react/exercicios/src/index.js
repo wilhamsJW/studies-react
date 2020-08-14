@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom'
 //import Primeiro from './componentes/Primeiro'                             //importação do arquivo Primeiro
 //import BomDia from './componentes/BomDia'
 //import {BoaTarde, BoaNoite} from './componentes/multiplos_parameter'    //usando múltiplos parametros sem default
-import x from './componentes/multiplos_parameter'                        //usando múltiplos parametros com default,a function foi exportada do arquivo como default, então posso atribuir um nome qq como no exemplo está x e dentro da div chamar x.nomedoarquivo
+//import x from './componentes/multiplos_parameter'                      //usando múltiplos parametros com default,a function foi exportada do arquivo como default, então posso atribuir um nome qq como no exemplo está x e dentro da div chamar x.nomedoarquivo
+import Saudacao from './componentes/Saudacao'                           //importando uma class (código mais abaixo)
+   
 
 
 //usando múltiplos parametros sem default
@@ -14,13 +16,18 @@ ReactDOM.render(
         <BoaNoite nome="Júnior"/>
     </div>, document.getElementById('root'))
 */
+    
+
+
 
 //usando múltiplos parametros com default
+/*
 ReactDOM.render(
 <div>
     <x.BoaTarde nome="Wilhams"/>
     <x.BoaNoite nome="Júnior"/>
 </div>, document.getElementById('root'))
+/8
 
 
 
@@ -41,3 +48,12 @@ ReactDOM.render(
  * Pode ser implementado o html como nesta forma do código ou por uma variável
  * Esta implementação é chamada de JSX que siginifica implantar hmtl em javascript
  */
+
+
+ //IMPORTANDO UMA CLASS
+
+ReactDOM.render(
+    <div>
+        <Saudacao x="Boa Tarde" nome="Wilhams" />   
+    </div>
+    , document.getElementById('root'))
