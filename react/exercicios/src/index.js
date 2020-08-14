@@ -1,17 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React  from 'react'
+import ReactDOM from 'react-dom'
+import Primeiro from './componentes/Primeiro'
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render(<Primeiro />, document.getElementById('root'))
+//o nome do componente é obrigatório que tenha letra maiscula exe: Primeiro
+//mas se na hora de renderizar vc colocar uma div ou outra tag hmtl irá funcionar normal
+//essa regra da letra maiscula só é válida para quando criamos nosso próprio componente
+
+//Usando JSX através de uma variável
+//const elemento = <h1>Wilhams Júnior/ Developer Júnior</h1>
+//ReactDOM.render(elemento, document.getElementById('root'))
+
+//ReactDOM.render(<h1>Estude de domingo a domingo</h1>, document.getElementById('root'))
+/**
+ * Pode ser implementado o html como nesta forma do código ou por uma variável
+ * Esta implementação é chamada de JSX que siginifica implantar hmtl em javascript
+ */
