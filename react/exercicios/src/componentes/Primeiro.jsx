@@ -22,4 +22,6 @@ export default function() {
  * Exemplo abaixo com arrow function
  * 
  * export default () => <h1>Olá mundo!</h1>
+ * 
+ * Aviso: para usar mais de uma tag terá q englobar com uma div
  */

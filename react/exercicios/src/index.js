@@ -1,9 +1,12 @@
 import React  from 'react'
 import ReactDOM from 'react-dom'
-import Primeiro from './componentes/Primeiro'
+//import Primeiro from './componentes/Primeiro'
+import BomDia from './componentes/BomDia'
+
+ReactDOM.render(<BomDia nome="Wilhams" idade={23}/>, document.getElementById('root'))
 
 
-ReactDOM.render(<Primeiro />, document.getElementById('root'))
+//ReactDOM.render(<Primeiro />, document.getElementById('root'))
 //o nome do componente é obrigatório que tenha letra maiscula exe: Primeiro
 //mas se na hora de renderizar vc colocar uma div ou outra tag hmtl irá funcionar normal
 //essa regra da letra maiscula só é válida para quando criamos nosso próprio componente
