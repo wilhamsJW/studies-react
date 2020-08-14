@@ -27,10 +27,10 @@ ReactDOM.render(
     <x.BoaTarde nome="Wilhams"/>
     <x.BoaNoite nome="Júnior"/>
 </div>, document.getElementById('root'))
-/8
+*/
 
 
-
+//Importando BomDia
 //ReactDOM.render(<BomDia nome="Wilhams" idade={23}/>, document.getElementById('root'))
 
 //ReactDOM.render(<Primeiro />, document.getElementById('root'))
@@ -50,10 +50,10 @@ ReactDOM.render(
  */
 
 
- //IMPORTANDO UMA CLASS
+ //IMPORTANDO UMA CLASS (Saudacao.jsx)
 
 ReactDOM.render(
     <div>
-        <Saudacao x="Boa Tarde" nome="Wilhams" />   
+        <Saudacao tipo ="Boa Tarde" nome="Wilhams" />   
     </div>
     , document.getElementById('root'))

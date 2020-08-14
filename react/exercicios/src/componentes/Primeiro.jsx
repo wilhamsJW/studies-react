@@ -23,5 +23,5 @@ export default function() {
  * 
  * export default () => <h1>Olá mundo!</h1>
  * 
- * Aviso: para usar mais de uma tag terá q englobar com uma div
+ * Aviso: para usar mais de uma tag terá q englobar com uma div ou usar o fragment(veja mais no arquivo bom dia)
  */

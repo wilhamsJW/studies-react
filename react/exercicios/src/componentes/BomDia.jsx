@@ -8,7 +8,7 @@ export default props =>
 <h2>Até mais! :)</h2>
 </div>*/
 
-//Caso não queira usar uma div pr anão sofrer alteração no layout da página, poderá usar o React.Fragment
+//Caso não queira usar uma div pra não sofrer alteração no layout da página, poderá usar o React.Fragment
 //Tamém posso usar o React.fragment na importação, dessa forma não será necessário usar a tag <React.Fragment>
 //e sim apenas a tag <Fragment>
 
