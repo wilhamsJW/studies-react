@@ -4,7 +4,7 @@ export default class Saudacao extends Component {
 
 
     state = {  //o state poderia ficar aqui mas o ideal é ficar dentro do constructor e temos q inicar ele dentro do constructor
-        tipo: "Fala",
+        tipo: "Olá",
         nome: "Júnior"
     }
 
@@ -14,7 +14,7 @@ export default class Saudacao extends Component {
             tipo: "Fala",
             nome: "Júnior"
         }*/
-        this.setTipo = this.setTipo.bind(this)//o bind me garante q o this será enxergado
+        this.setTipo = this.setTipo.bind(this)//o bind me garante q o this será enxergado ou invocado, sem o bind gerará um erro
     }
 
 
@@ -39,12 +39,12 @@ export default class Saudacao extends Component {
 
     render() {
         const { tipo, nome } = this.state 
-        return ( //no primeiro input usei this, pq a função setTipo será invocada pelo constructor, no 2º input fiz uma arrow function e chamei a função setNome
+        return ( //no primeiro input usei this, pq a função setTipo será invocada pelo constructor com o bind, no 2º input fiz uma arrow function e chamei a função setNome
             <div> 
                 <h1>{tipo} {nome}!</h1>
                 <hr />
                 <input type="text" placeholder="Digite algo..." value={tipo} onChange={this.setTipo} /> 
-                <input type="text" placeholder="nome..." value={nome} onChange={e => this.setNome(e)} />
+                <input type="text" placeholder="Digite algo..." value={nome} onChange={e => this.setNome(e)} />
             </div>
         )
     }

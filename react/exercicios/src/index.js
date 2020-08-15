@@ -4,8 +4,8 @@ import ReactDOM from 'react-dom'
 //import BomDia from './componentes/BomDia'
 //import {BoaTarde, BoaNoite} from './componentes/multiplos_parameter'    //usando múltiplos parametros sem default
 //import x from './componentes/multiplos_parameter'                      //usando múltiplos parametros com default,a function foi exportada do arquivo como default, então posso atribuir um nome qq como no exemplo está x e dentro da div chamar x.nomedoarquivo
-import Saudacao from './componentes/Saudacao'                           //importando uma class (código mais abaixo)
-   
+//import Saudacao from './componentes/Saudacao'                           //importando uma class (código mais abaixo)
+import Pai from './componentes/Pai'   
 
 
 //usando múltiplos parametros sem default
@@ -50,10 +50,20 @@ ReactDOM.render(
  */
 
 
- //IMPORTANDO UMA CLASS (Saudacao.jsx)
+ //IMPORTANDO UMA CLASS (Arquivo: Saudacao.jsx)
+/*
+ReactDOM.render(  //tipo e nome são variáveis atribuídas no arquivo saudação, aqui elas podem ser alteradas diretamente, mas como estou
+                 //fazendo o uso do estado ou state, o state que é o responsável por alterar o valor dessas varíáveis, na verdade nem precisa usar essa var aí abaixo
+    <div>
+        <Saudacao tipo ="Boa Tarde" nome="Wilhams" />    
+    </div>
+    , document.getElementById('root'))*/
+
+
+//IMPORTANDO O ARQUIVO PAI
 
 ReactDOM.render(
     <div>
-        <Saudacao tipo ="Boa Tarde" nome="Wilhams" />   
-    </div>
-    , document.getElementById('root'))
+        <Pai nome="Jeová" sobrenome="Deus Poderoso" />
+    </div> , document.getElementById('root')
+)
