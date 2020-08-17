@@ -9,7 +9,7 @@ export default props => {//Usamos o $ pq estamos dentro de uma template string u
     x += props.double ? 'double' : ''      //button.double
     x += props.triple ? 'triple' : ''     //button.triple
 
-    return (<button onClick={e => props.click(props.label)} //onClick={e => props.click(props.label)} = props.click permite o button receber uma função com um clik e que as funções dentro do button no Caculator sejam executadas com sucesso, props.label é para que os números sejam mostrados no console e no display(ainda farei o teste no display)
+    return (<button onClick={e => props.click(props.label)} //Aviso: onClick={e => props.click(props.label)} = props.click permite o button receber uma função com um clik e que as funções dentro do button no Caculator sejam executadas com sucesso, props.label é para que os números sejam mostrados no console e no display(ainda farei o teste no display)
          className={x}>
         {props.label}
     </button>

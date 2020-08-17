@@ -4,9 +4,21 @@ import './CalculatorCss.css'
 import Display from '../components/Display'
 import Button from '../components/Button'
 
+const initialState = {
+    displayValue: '9',    //esse valor é o que está sendo mostrado no display da calculadora
+    clearDisplay: false, //propriedade p/ limpar o display
+    operation: null,    //armazena as operações como: +,-,*,/,=
+    values: [0, 0],    //array com 2 valores, serve para armazenar um  valor digitado mais uma operação e mais outro valor dgitado e dá o resultado
+    current: 0        //esta var serve pra atualizar o valor do array, ela vai dizer se estou manipulando o valor de índice 0 do arrary ou o valor de ínidice 1
+}
+
 export default  class Calculator extends Component {
 
+    //iniciando a const initialState dentro da class Calculator com o operador spread, dessa forma criamos um clone da const initialState dentro de state
+    state ={...initialState}
+
     clearMemory(c) {
+        this.setState({...initialState})
         console.log('clear')
     }
 
@@ -28,7 +40,7 @@ export default  class Calculator extends Component {
 
         return (
             <div className="calculator">
-              <Display value={10000000000000} />  
+              <Display value={this.state.displayValue} />  
               <Button label="AC"click={c => this.clearMemory()} triple /> {/*invocando a função através de uma arrow function, tbm pode se fazer pelo constructor*/}
               <Button label="/" click={this.setOperation} operation /> {/*invocando a função pelo constructor, o bind garante que o this identifique a função requirida*/}
               <Button label="7" click={this.addDigit} />
