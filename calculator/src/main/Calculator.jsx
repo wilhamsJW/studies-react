@@ -6,7 +6,7 @@ import Button from '../components/Button'
 
 const initialState = {
     displayValue: '0',    //esse valor é o que está sendo mostrado no display da calculadora
-    clearDisplay: false, //propriedade p/ limpar o display
+    clearDisplay: '',    //propriedade p/ limpar o display
     operation: null,    //armazena as operações como: +,-,*,/,=
     values: [0, 0],    //array com 2 valores, serve para armazenar um  valor digitado mais uma operação e mais outro valor dgitado e dá o resultado
     current: 0        //esta var serve pra atualizar o valor do array, ela vai dizer se estou manipulando o valor de índice 0 do arrary acima chamado values ou o valor de ínidice 1
@@ -24,7 +24,29 @@ export default class Calculator extends Component {
     }
 
     setOperation(operation) {
-        console.log(operation)
+        if (this.state.current === 0) {
+            this.setState({ operation, current: 1, clearDisplay: true })
+        } else {
+            const equals = operation === '='
+            const currentOperation = this.state.operation
+
+            //o ideal seria substituir esse eval por um switch ou outra lógica pq eval gera uma advertência
+
+            const values = [...this.state.values]
+            try {
+                values[0] = eval(`${values[0]} ${currentOperation} ${values[1]}`)
+            } catch (e) {   
+                values[0] = this.state.values[0]
+            }
+            values[1] = 0
+
+            this.setState({
+                displayValue: values[0], operation: equals ? null : operation,
+                current: equals ? 0 : 1,
+                clearDisplay: !equals,
+                values
+            })
+        }
     }
 
     // Todos os números digitados pelo usuário entrará aqui
@@ -49,13 +71,13 @@ export default class Calculator extends Component {
 
         this.setState({ displayValue, clearDisplay: false })
 
-        //os números entrarão aqui e serão colocados dentro de uma array chamado values, com duas posições
+        //os números entrarão aqui e serão colocados dentro de uma array chamado values do initiaSatates, com duas posições
         if (n !== '.') {
-            const i = this.state.current                //clonando a var current do initialState, essa var foi criadas apenas para colocar valor na posição, poderia ter colocdo o 0 diretamente no values, seria outra opção
+            const i = this.state.current                //clonando a var current do initialState, essa var foi criadas apenas para colocar valor na posição, poderia ter colocdo o 0 diretamente no  values[i], seria outra opção
             const newValue = parseFloat(displayValue)  //trasnformando string em número
             const values = [...this.state.values]     //clonando a propriedade values do initialState
             values[i] = newValue                     //values[i] na posição i será igual a newValue, ou seja estou pegando a propriedade de displayValue que está recebendo os números digitados e colocando ela dentro da var value na posição i ou posição 0
-                                                    //a value do initState tem duas posições, na primeira posição receberá todos os dados digitados pelo user antes do operador 
+            //a value do initState tem duas posições, na primeira posição receberá todos os dados digitados pelo user antes do operador 
             this.setState({ values })              //add o array no state do meu objeto
             console.log(values)                   //no console mostra que está sendo armazenado os valores digitados dentro da primeira posição do array, depois disso o user digita um operador mais outros números, esses outros números terão q ficar dentro da posição 1 do array
         }
