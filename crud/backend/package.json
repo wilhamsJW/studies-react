@@ -1,0 +1,19 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "json-server --watch db.json --port 3001",
+    "istoÈumComentário": "foi tirado  a linha padrão chamada test, e substituído por start --watch irá monitorar o aquivo db.json, --port 3001 = colocando o backend na porta 3001 e o frontend por padrão ficará na porta 3000 "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "0.13.0"
+  }
+ 
+}
+
+
