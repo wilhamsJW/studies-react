@@ -1,5 +1,7 @@
+import React from 'react'
+
 export default function() {
-    return 'teste'
+    return <h1 className="">Primeiro Teste</h1>
 
     //esses são exemplos de componentes baseado em função
     //exportação da function, pode ser importada no arquivo index.js

@@ -20,7 +20,8 @@ export default props =>
 
 /*usando a tag <Fragment> com importação */
 <Fragment>
-<h1>Bom dia {props.nome}!</h1>
+<h1>Bom dia {props.x}!</h1>
+<h1>Sua idade é: {props.idade}</h1>
 <h2>Até mais! :)</h2>
 </Fragment> 
 
