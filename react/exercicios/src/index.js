@@ -93,8 +93,8 @@ ReactDOM.render(
     <div>
         <Pai nome="Jeová" sobrenome="Poderoso">
             <Filho nome="Jesus" />
-            {/*<Filho nome="Miguel" />
-            <Filho nome="Arcanjo" />*/}
+            <Filho nome="Miguel" />
+            <Filho nome="Arcanjo" />
 
         </Pai>
     </div>, document.getElementById('root'))
