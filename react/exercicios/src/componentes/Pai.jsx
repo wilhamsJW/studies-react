@@ -83,6 +83,8 @@ export default props =>
 
 //UTILIZANDO A FUNÇÃO MAP() com uma função, caso precise ser invocado em outro lugar do código, 
 /*
+
+//Utilizando um método para fazer o clone dentro do mesmo arquivo
 function withCloneElement (props) {
     return React.Children.map(props.children, child => {
         return React.cloneElement(child, { ...props, ...child.props })
@@ -101,6 +103,8 @@ export default props =>
 
 //UTILIZANDO A FUNÇÃO MAP() com uma função sendo importada de outra pasta
 //isso é útil para um código grande quando tem que se invocar a mesma função várias vezes
+//Utilizando um método para fazer o clone, só q dessa vez o método está em outro arquivo e pra ser executado
+//precisa ser immportado como já está lá em cima
 /*
 export default props =>
     <div>
