@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom'
 //import Primeiro from './componentes/Primeiro'                             //importação do arquivo Primeiro
 //import BomDia from './componentes/BomDia'
 //import {BoaTarde, BoaNoite} from './componentes/Multiplos_parameter'    //usando múltiplos parametros sem default
-//import x from './componentes/M ultiplos_parameter'                      //usando múltiplos parametros com default,a function foi exportada do arquivo como default, então posso atribuir um nome qq,  como no exemplo está x e dentro da div chamar x.nomedoarquivo
+//import x from './componentes/Multiplos_parameter'                      //usando múltiplos parametros com default,a function foi exportada do arquivo como default, então posso atribuir um nome qq,  como no exemplo está x e dentro da div chamar x.nomedoarquivo
 import Saudacao from './componentes/Saudacao'                           //importando uma class (código mais abaixo)
 //import Pai from './componentes/Pai'
 //import Filho from './componentes/Filho'
