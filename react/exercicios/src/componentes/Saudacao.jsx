@@ -43,7 +43,7 @@ export default class Saudacao extends Component {
             <div> 
                 <h1>{tipo} {nome}!</h1>
                 <hr />
-                <input type="number" placeholder="Digite apenas números..." onChange={ this.setTipo} /> {/*chamando apenas a função, this.setTipo. pq ela está sendo referenciada no construtor*/}
+                <input type="number" placeholder="Digite apenas números..." onChange={this.setTipo} /> {/*chamando apenas a função, this.setTipo. pq ela está sendo referenciada no construtor*/}
                 <input type="text" placeholder="Digite algo..." onChange={e => this.setNome(e)} /> {/**usando arrow fucntion, e não fazendo uso do constructor */}
             </div>
         )

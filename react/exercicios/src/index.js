@@ -5,9 +5,9 @@ import ReactDOM from 'react-dom'
 //import BomDia from './componentes/BomDia'
 //import {BoaTarde, BoaNoite} from './componentes/Multiplos_parameter'    //usando múltiplos parametros sem default
 //import x from './componentes/Multiplos_parameter'                      //usando múltiplos parametros com default,a function foi exportada do arquivo como default, então posso atribuir um nome qq,  como no exemplo está x e dentro da div chamar x.nomedoarquivo
-import Saudacao from './componentes/Saudacao'                           //importando uma class (código mais abaixo)
-//import Pai from './componentes/Pai'
-//import Filho from './componentes/Filho'
+//import Saudacao from './componentes/Saudacao'                           //importando uma class (código mais abaixo)
+import Pai from './componentes/Pai'
+import Filho from './componentes/Filho'
 
 
 /*ReactDOM.render(<Primeiro />, document.getElementById('root'))*/
@@ -15,7 +15,6 @@ import Saudacao from './componentes/Saudacao'                           //import
 //ReactDOM.render(<BomDia x="Wilhams" idade="25"/>, document.getElementById('root'))
 
 //usando múltiplos parametros sem default
-
 /*
 ReactDOM.render(
     <div> 
@@ -56,37 +55,46 @@ ReactDOM.render(
  */
 
 
-//IMPORTANDO UMA CLASS (Arquivo: Saudacao.jsx)
 
+
+
+
+//IMPORTANDO UMA CLASS (Arquivo: Saudacao.jsx)
+/*
 ReactDOM.render(  //tipo e nome são variáveis atribuídas no arquivo saudação, aqui elas podem ser alteradas diretamente, mas como estou
                  //fazendo o uso do estado ou state, o state que é o responsável por alterar o valor dessas varíáveis, na verdade nem precisa usar essa var aí abaixo
     <div>
         <Saudacao tipo ="Boa Tarde" nome="Wilhams" />    
     </div>
-    ,document.getElementById('root'))
+    ,document.getElementById('root'))*/
 
 
-//IMPORTANDO O ARQUIVO PAI
+
+
+
+//IMPORTANDO O ARQUIVO PAI E FILHO
 /*
 ReactDOM.render(
     <div>
-        <Pai nome="Jeová" sobrenome="Deus Poderoso">
-        <Filho nome="Paulo" sobrenome="Rodrigo" /> {/*Para que esses elementos Filho seja aceitos no arquivo Pai, temos que ir no arquivo Pai e colocar {props.children} aí sim serão aceitos e visualizados no browser*/
-/* <Filho nome="Paulo" sobrenome="Rodolfo" />
- </Pai>
-</div> , document.getElementById('root')
+     <Pai nome="Jeová" sobrenome="Deus Poderoso">
+        <Filho nome="Paulo" sobrenome="Rodrigo" /> {/*Para que esses elementos Filho seja aceitos no arquivo Pai, temos que ir no arquivo Pai e colocar {props.children} aí sim serão aceitos e visualizados no browser
+        <Filho nome="Paulo" sobrenome="Rodolfo" />
+     </Pai>
+</div>,document.getElementById('root')
 )*/
+
+
+
 
 //Agora estamos utilizando o mesmo arquivo para exemplificar uma forma de clonar um elemento
 //UTILIZANDO O React.cloneElement no arquivo Pai.jsx - com ela conseguimos clonar o elemento e add mais propriedades ao elemento
-/*
+
 ReactDOM.render(
     <div>
         <Pai nome="Jeová" sobrenome="Poderoso">
             <Filho nome="Jesus" />
-            <Filho nome="Miguel" />
-            <Filho nome="Arcanjo" />
+            {/*<Filho nome="Miguel" />
+            <Filho nome="Arcanjo" />*/}
 
         </Pai>
-    </div>, document.getElementById('root')
-)*/
+    </div>, document.getElementById('root'))
